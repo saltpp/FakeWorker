@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FakeWorker", "FakeWorker\FakeWorker.vcxproj", "{AE32A679-B227-4731-969D-4D50D9436645}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE32A679-B227-4731-969D-4D50D9436645}.Debug|x64.ActiveCfg = Debug|x64
+		{AE32A679-B227-4731-969D-4D50D9436645}.Debug|x64.Build.0 = Debug|x64
+		{AE32A679-B227-4731-969D-4D50D9436645}.Debug|x86.ActiveCfg = Debug|Win32
+		{AE32A679-B227-4731-969D-4D50D9436645}.Debug|x86.Build.0 = Debug|Win32
+		{AE32A679-B227-4731-969D-4D50D9436645}.Release|x64.ActiveCfg = Release|x64
+		{AE32A679-B227-4731-969D-4D50D9436645}.Release|x64.Build.0 = Release|x64
+		{AE32A679-B227-4731-969D-4D50D9436645}.Release|x86.ActiveCfg = Release|Win32
+		{AE32A679-B227-4731-969D-4D50D9436645}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {357DB3CF-2ECA-42C1-A94A-A507BF70E24E}
+	EndGlobalSection
+EndGlobal
