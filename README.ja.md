@@ -33,3 +33,7 @@
 
 ## ライセンス
 MIT
+
+
+## その他
+[寄付](https://www.buymeacoffee.com/saltpp)

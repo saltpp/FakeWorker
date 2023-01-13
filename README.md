@@ -30,3 +30,6 @@
 
 ## License
 MIT
+
+## Others
+[Buy me a coffee](https://www.buymeacoffee.com/saltpp)
