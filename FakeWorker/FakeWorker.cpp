@@ -17,6 +17,13 @@ BOOL                InitInstance(HINSTANCE, int);
 LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK    About(HWND, UINT, WPARAM, LPARAM);
 
+//-- {
+#define LOCAL static
+#define ID_TIMER (1234)
+
+LOCAL int l_nInterval = 3 * 60 * 1000; // 3 min
+//-- }
+
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
                      _In_opt_ HINSTANCE hPrevInstance,
                      _In_ LPWSTR    lpCmdLine,
@@ -152,7 +159,34 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         break;
     case WM_DESTROY:
         PostQuitMessage(0);
+        //-- {
+        KillTimer(hWnd, ID_TIMER);
+        //-- }
         break;
+
+    //-- {
+    case WM_CREATE:
+        SetTimer(hWnd, ID_TIMER, l_nInterval, (TIMERPROC) NULL);
+        break;
+
+    case WM_TIMER:
+        // https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-sendinput
+        INPUT input;
+        input.type           = INPUT_MOUSE;
+        input.mi.dx          = 1;
+        input.mi.dy          = 1;
+        input.mi.mouseData   = 0;
+        input.mi.dwFlags     = MOUSEEVENTF_MOVE;
+        input.mi.time        = 0;
+        input.mi.dwExtraInfo = 0;
+        SendInput(1, &input, sizeof(INPUT));
+
+        input.mi.dx = -1;
+        input.mi.dy = -1;
+        SendInput(1, &input, sizeof(INPUT));
+        break;
+     //-- }
+
     default:
         return DefWindowProc(hWnd, message, wParam, lParam);
     }
