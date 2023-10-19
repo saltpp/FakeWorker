@@ -9,6 +9,7 @@
 
 
 ## インストール方法
+- https://github.com/saltpp/FakeWorker/releases から zip ファイルをダウンロードして解凍してください
 - FakeWorker.exe 任意のディレクトリに置いてください
 
 

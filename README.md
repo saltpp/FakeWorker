@@ -8,6 +8,7 @@
 
 
 ## Installation
+- Download zip file from https://github.com/saltpp/FakeWorker/releases and extract it
 - Place FakeWorker.exe in any directory
 
 
